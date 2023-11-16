@@ -18,14 +18,17 @@ trait CanConstructRoute
 
         if (Filament::getCurrentPanel()->getTenantModel()) {
 
-            $tenants = Filament::getCurrentPanel()->getTenantModel()::find(Filament::auth()->user()->getTenants(Filament::getCurrentPanel()));
+            $tenants = Filament::getCurrentPanel()->getTenantModel()::find(Filament::auth()->user()?->getTenants(Filament::getCurrentPanel()));
 
-            $tenant = $tenants->first();
+            $tenant = $tenants?->first();
 
-            $slug = $tenant->slug;
-            if ($slug) {
-                $this->route = parse_url($instance->getUrl(['tenant' => $slug]))['path'];
-            }
+            $slug = $tenant?->slug;
+
+            $this->route = parse_url($instance->getUrl())['path'];
+
+            $this->route = $slug
+                ? parse_url($instance->getUrl(['tenant' => $slug]))['path']
+                : parse_url($instance->getUrl())['path'];
         } else {
             if (method_exists($instance, 'getResource')) {
                 $resource = new ($instance->getResource());
