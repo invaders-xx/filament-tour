@@ -225,8 +225,7 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.footer.parentElement.classList.add(...contentClasses.split(" "));
 
                     popover.footer.innerHTML = "";
-                    popover.footer.classList.add('flex', 'mt-3');
-                    popover.footer.style.justifyContent = 'space-evenly';
+                    popover.footer.classList.add('flex', 'mt-3', 'gap-3');
 
                     popover.footer.classList.remove("driver-popover-footer");
 
