@@ -24,9 +24,11 @@ trait CanConstructRoute
 
             $slug = $tenant?->slug;
 
-            $this->route = $slug
-                ? parse_url($instance->getUrl(['tenant' => $slug]))['path']
-                : parse_url($instance->getUrl(['tenant' => 1]))['path'];
+            if ($slug) {
+                $this->route = parse_url($instance->getUrl(['tenant' => $slug]))['path'];
+            } elseif ($tenant) {
+                $this->route = parse_url($instance->getUrl(['tenant' => $tenant?->id]))['path'];
+            }
         } else {
             if (method_exists($instance, 'getResource')) {
                 $resource = new ($instance->getResource());
