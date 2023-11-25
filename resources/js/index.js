@@ -104,7 +104,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "p-6 dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
 
                     popover.footer.parentElement.classList.add(...contentClasses.split(" "));
                 },
@@ -225,7 +225,7 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.footer.parentElement.classList.add(...contentClasses.split(" "));
 
                     popover.footer.innerHTML = "";
-                    popover.footer.classList.add('flex', 'mt-3', 'gap-3');
+                    popover.footer.classList.add('flex', 'mt-6', 'gap-3');
 
                     popover.footer.classList.remove("driver-popover-footer");
 
