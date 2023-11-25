@@ -35,7 +35,6 @@
 .driver-popover {
     box-sizing: border-box;
     margin: 0;
-    padding: 24px;
     border-radius: 5px;
     min-width: 300px !important;
     max-width: 600px !important;
