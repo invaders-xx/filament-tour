@@ -101,6 +101,10 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.closeButton.style.right = '8px';
                     
                     popover.title.style.fontFamily = 'Inter';
+                    popover.description.style.fontFamily = 'Inter';
+                    
+                    popover.description.style.fontFamily = 'Inter';
+
                     popover.title.innerHTML = "";
                     popover.title.innerHTML = state.activeStep.popover.title;
 
@@ -219,6 +223,8 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.closeButton.style.right = '8px';
                     
                     popover.title.style.fontFamily = 'Inter';
+                    popover.description.style.fontFamily = 'Inter';
+                    
                     popover.title.innerHTML = "";
                     popover.title.innerHTML = state.activeStep.popover.title;
 
