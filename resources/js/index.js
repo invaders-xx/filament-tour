@@ -101,6 +101,7 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.closeButton.style.right = '8px';
                     
                     popover.title.style.fontFamily = 'Inter';
+                    popover.title.classList.add('tracking-tight');
                     popover.description.style.fontFamily = 'Inter';
                     
                     popover.description.style.fontFamily = 'Inter';
@@ -112,7 +113,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "p-6 dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
 
                     popover.footer.parentElement.classList.add(...contentClasses.split(" "));
                 },
@@ -223,6 +224,7 @@ document.addEventListener('livewire:initialized', async function () {
                     popover.closeButton.style.right = '8px';
                     
                     popover.title.style.fontFamily = 'Inter';
+                    popover.title.classList.add('tracking-tight');
                     popover.description.style.fontFamily = 'Inter';
                     
                     popover.title.innerHTML = "";
@@ -232,7 +234,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "p-6 dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
 
                     // popover.description.insertAdjacentHTML("beforeend", state.activeStep.popover.form);
 
