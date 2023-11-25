@@ -97,6 +97,10 @@ document.addEventListener('livewire:initialized', async function () {
                 overlayColor: localStorage.theme === 'light' ? highlight.colors.light : highlight.colors.dark,
 
                 onPopoverRender: (popover, {config, state}) => {
+                    popover.closeButton.style.top = '8px';
+                    popover.closeButton.style.right = '8px';
+                    
+                    popover.title.style.fontFamily = 'Inter';
                     popover.title.innerHTML = "";
                     popover.title.innerHTML = state.activeStep.popover.title;
 
@@ -211,6 +215,10 @@ document.addEventListener('livewire:initialized', async function () {
                     if (state.activeStep.uncloseable || tour.uncloseable)
                         document.querySelector(".driver-popover-close-btn").remove();
 
+                    popover.closeButton.style.top = '8px';
+                    popover.closeButton.style.right = '8px';
+                    
+                    popover.title.style.fontFamily = 'Inter';
                     popover.title.innerHTML = "";
                     popover.title.innerHTML = state.activeStep.popover.title;
 
