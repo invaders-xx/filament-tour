@@ -125,6 +125,7 @@ document.addEventListener('livewire:initialized', async function () {
     });
 
     Livewire.on('filament-tour::open-tour', function (event) {
+        console.log(event);
         let tour = tours.find(element => element.id === event.id);
 
         if (tour) {
