@@ -89,8 +89,8 @@ document.addEventListener('livewire:initialized', async function () {
     }
 
 
-    Livewire.on('filament-tour::open-highlight', function (id) {
-        let highlight = highlights.find(element => element.id === id);
+    Livewire.on('filament-tour::open-highlight', function (event) {
+        let highlight = highlights.find(element => element.id === event.id);
 
         if (highlight) {
             driver({
@@ -124,8 +124,8 @@ document.addEventListener('livewire:initialized', async function () {
         }
     });
 
-    Livewire.on('filament-tour::open-tour', function (id) {
-        let tour = tours.find(element => element.id === id);
+    Livewire.on('filament-tour::open-tour', function (event) {
+        let tour = tours.find(element => element.id === event.id);
 
         if (tour) {
             openTour(tour);
