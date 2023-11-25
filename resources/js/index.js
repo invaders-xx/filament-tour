@@ -218,7 +218,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "p-6 dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
 
                     // popover.description.insertAdjacentHTML("beforeend", state.activeStep.popover.form);
 
