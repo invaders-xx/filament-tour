@@ -220,6 +220,7 @@ document.addEventListener('livewire:initialized', async function () {
                     if (state.activeStep.uncloseable || tour.uncloseable)
                         document.querySelector(".driver-popover-close-btn").remove();
 
+                    console.log(popover);
                     const bottomValue = popover.wrapper.style.bottom.split('px').shift();
 
                     console.log(bottomValue);
