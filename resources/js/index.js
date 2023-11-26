@@ -143,6 +143,7 @@ document.addEventListener('livewire:initialized', async function () {
             const driverObj = driver({
                 allowClose: true,
                 disableActiveInteraction: true,
+                stageRadius: 12,
                 overlayColor: localStorage.theme === 'light' ? tour.colors.light : tour.colors.dark,
                 onDeselected: ((element, step, {config, state}) => {
 
