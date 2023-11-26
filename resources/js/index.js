@@ -113,7 +113,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10";
 
                     popover.footer.parentElement.classList.add(...contentClasses.split(" "));
                 },
@@ -220,17 +220,6 @@ document.addEventListener('livewire:initialized', async function () {
                     if (state.activeStep.uncloseable || tour.uncloseable)
                         document.querySelector(".driver-popover-close-btn").remove();
 
-                    console.log(popover);
-                    console.log(popover.wrapper.style);
-                    console.log(popover.wrapper.style.bottom);
-                    console.log(popover.wrapper.style['bottom']);
-                    console.log(popover.wrapper.style.inset);
-                    console.log(popover.wrapper.style['inset']);
-
-                    const bottomValue = popover.wrapper.style.bottom.split('px').shift();
-
-                    console.log(bottomValue);
-
                     popover.closeButton.style.top = '8px';
                     popover.closeButton.style.right = '8px';
                     
@@ -245,7 +234,7 @@ document.addEventListener('livewire:initialized', async function () {
                         popover.title.firstChild.style.justifyContent = 'center';
                     }
 
-                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 mb-4";
+                    let contentClasses = "dark:text-white fi-section rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10";
 
                     // popover.description.insertAdjacentHTML("beforeend", state.activeStep.popover.form);
 
