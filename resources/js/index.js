@@ -221,6 +221,12 @@ document.addEventListener('livewire:initialized', async function () {
                         document.querySelector(".driver-popover-close-btn").remove();
 
                     console.log(popover);
+                    console.log(popover.wrapper.style);
+                    console.log(popover.wrapper.style.bottom);
+                    console.log(popover.wrapper.style['bottom']);
+                    console.log(popover.wrapper.style.inset);
+                    console.log(popover.wrapper.style['inset']);
+
                     const bottomValue = popover.wrapper.style.bottom.split('px').shift();
 
                     console.log(bottomValue);
