@@ -18,7 +18,7 @@ trait CanConstructRoute
 
         if (Filament::getCurrentPanel()->getTenantModel()) {
 
-            $tenants = Filament::auth()->user()->getTenants(Filament::getCurrentPanel());
+            $tenants = Filament::auth()->user()?->getTenants(Filament::getCurrentPanel());
 
             $tenant = $tenants?->first();
 
